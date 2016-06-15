@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+	char str1[100],str2[100],str3[100],*ptr;
+	int ch;
+	clrscr();
+	printf("Enter string A :");
+	scanf("%s",str1);
+	printf("\nEnter string B :");
+	scanf("%s",str2);
+	printf("\nEnter string C :");
+	scanf("%s",str3);
+	strcat(str1,str2);
+	ch=strcmp(str1,str3);
+	if(ch==0)
+		printf("TRUE");
+	else
+		printf("FALSE");
+	getch();
+}
+
