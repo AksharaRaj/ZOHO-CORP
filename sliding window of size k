@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int n,i,j,arr[100],key,max=0;
+	printf("Enter the number of values in the array :");
+	scanf("%d",&n);
+	printf("Enter the key value :");
+	scanf("%d",&key);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&arr[i]);
+	}
+	for(i=0;i<=n-key;i++)
+	{
+		for(j=i;j<=((i+key)-1);j++)
+		{
+			if(arr[j]>max)
+				max=arr[j];
+		}
+		printf("%d ",max);
+		max=0;
+	}
+	getch();
+}
+
