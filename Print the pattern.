@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int i=0,j,n,d,arr[50][50]={0};
+	clrscr();
+	printf("Enter the input :");
+	scanf("%d",&n);d=n-1;
+	for(i=0;i<((n*2)+1);i++)
+	{
+
+		for(j=i;j<((n*2)+1)-i;j++)
+		{
+				arr[j][i]=i;
+		}
+
+	}
+	for(i=n+1;i<((n*2)+1);i++)
+	{
+		for(j=d;j<((n*2)+1)-d;j++)
+		{
+			arr[j][i]=d;
+		}
+		d--;
+	}
+	for(i=0;i<((n*2)+1);i++)
+	{
+
+		for(j=0;j<((n*2)+1);j++)
+		{
+			printf("%d ",arr[i][j]);
+		}
+		printf("\n");
+	}
+	getch();
+}
